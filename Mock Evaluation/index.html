@@ -5,178 +5,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* *{
-            margin: 0;
-            padding: 0;
-        } */
-        .navbar {
-            width: 100%;
-            height: 80px;
-            display: flex;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            color: rgb(10, 112, 238);
-            font-weight: bold;
-        }
-
-        .next {
-            display: flex;
-            gap: 30px;
-            margin: auto;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-
-        }
-
-        .downbtn {
-            margin: auto;
-            padding: 10px;
-            background-color: red;
-            color: white;
-            border: 0;
-            /* margin-left: 150px; */
-        }
-
-        .container {
-            width: 300px;
-            height: 400px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 10px;
-
-        }
-
-        .image {
-            width: 100px;
-            height: 100px;
-        }
-
-        .box {
-            width: 200px;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: red;
-            color: white;
-            padding: 30px;
-            /* gap: 10px; */
-        }
-
-
-        .view {
-            background-color: white;
-            padding: 5px;
-            color: red;
-            border: 0;
-
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            margin-left: 250px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
         .explore{
-
+            /* margin: 20px; */
+            display: grid;
+            grid-template-columns: repeat(4, minmax(265px, auto));
+            gap: 10px;
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 265px;
+            height: 200px;
+            display: flex;
+            gap: 5px;
+            border: 1px solid gray;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+        }
+        .container2{
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
+    <div class="navbar">
+            <h1>Domino's Pizza</h1>
+            <div class="next">
+                <p>OUR MENU</p>
+                <p>DOMINO'S STORES</p>
+                <p>GIFT CARD</p>
+                <p>CORPORATE ENQUIRY</p>
+                <p>CONTACT</p>
+            </div>
+            <button class="downbtn">Download App</button>
+        </div>
     <div class="main">
-        <div class="navbar">
-        <h1>Domino's Pizza</h1>
-        <div class="next">
-            <p>OUR MENU</p>
-            <p>DOMINO'S STORES</p>
-            <p>GIFT CARD</p>
-            <p>CORPORATE ENQUIRY</p>
-            <p>CONTACT</p>
-        </div>
-        <button class="downbtn">Download App</button>
-    </div>
-    <div class="main-container">
-        <h2>Order</h2>
-        <div class="container">
-            <div class="box">
-                <img class="image"
-                    src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
-                    alt="Pizza Image">
-                <h3>VEG PIZZA</h3>
-                <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas. It's softer
-                    and
-                    tastier</p>
-                <button class="view">VIEW ALL</button>
-            </div>
-            <div class="box">
-                <img class="image"
-                    src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
-                    alt="Pizza Image">
-                <h3>VEG PIZZA</h3>
-                <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas. It's softer
-                    and
-                    tastier</p>
-                <button class="view">VIEW ALL</button>
-            </div>
-            <div class="box">
-                <img class="image"
-                    src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
-                    alt="Pizza Image">
-                <h3>VEG PIZZA</h3>
-                <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas. It's softer
-                    and
-                    tastier</p>
-                <button class="view">VIEW ALL</button>
-            </div>
-            <div class="box">
-                <img class="image"
-                    src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
-                    alt="Pizza Image">
-                <h3>VEG PIZZA</h3>
-                <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas. It's softer
-                    and
-                    tastier</p>
-                <button class="view">VIEW ALL</button>
-            </div>
-            <div class="box">
-                <img class="image"
-                    src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
-                    alt="Pizza Image">
-                <h3>VEG PIZZA</h3>
-                <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas. It's softer
-                    and
-                    tastier</p>
-                <button class="view">VIEW ALL</button>
-            </div>
-            <div class="box">
-                <img class="image"
-                    src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
-                    alt="Pizza Image">
-                <h3>VEG PIZZA</h3>
-                <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas. It's softer
-                    and
-                    tastier</p>
-                <button class="view">VIEW ALL</button>
+        <div class="main-container">
+            <h2>Order</h2>
+            <div class="container">
+                <div class="box">
+                    <img class="image"
+                        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                        alt="Pizza Image">
+                    <h3>VEG PIZZA</h3>
+                    <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious
+                        vegetarian pizzas. It's softer
+                        and
+                        tastier</p>
+                    <button class="view">VIEW ALL</button>
+                </div>
+                <div class="box">
+                    <img class="image"
+                        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                        alt="Pizza Image">
+                    <h3>VEG PIZZA</h3>
+                    <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious
+                        vegetarian pizzas. It's softer
+                        and
+                        tastier</p>
+                    <button class="view">VIEW ALL</button>
+                </div>
+                <div class="box">
+                    <img class="image"
+                        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                        alt="Pizza Image">
+                    <h3>VEG PIZZA</h3>
+                    <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious
+                        vegetarian pizzas. It's softer
+                        and
+                        tastier</p>
+                    <button class="view">VIEW ALL</button>
+                </div>
+                <div class="box">
+                    <img class="image"
+                        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                        alt="Pizza Image">
+                    <h3>VEG PIZZA</h3>
+                    <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious
+                        vegetarian pizzas. It's softer
+                        and
+                        tastier</p>
+                    <button class="view">VIEW ALL</button>
+                </div>
+                <div class="box">
+                    <img class="image"
+                        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                        alt="Pizza Image">
+                    <h3>VEG PIZZA</h3>
+                    <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious
+                        vegetarian pizzas. It's softer
+                        and
+                        tastier</p>
+                    <button class="view">VIEW ALL</button>
+                </div>
+                <div class="box">
+                    <img class="image"
+                        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                        alt="Pizza Image">
+                    <h3>VEG PIZZA</h3>
+                    <p style="text-align: center;">A delight for veggie lovers! Choose from our wide range of delicious
+                        vegetarian pizzas. It's softer
+                        and
+                        tastier</p>
+                    <button class="view">VIEW ALL</button>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="container2">
+        <h2>Explore</h2>
+        <div class="explore">
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
 
-    <!-- <div class="explore">
-        <div class="box1">
-            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="">
-            <h3>OUR MENU</h3>
-            <p>Explore our range of delicious pizzas, delivered in 30 minutes</p>
-            <hr>
-            <div>DISCOVER PIZZA</div>
+                <div>DISCOVER PIZZA</div>
+            </div>
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
+
+                <div>DISCOVER PIZZA</div>
+            </div>
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
+
+                <div>DISCOVER PIZZA</div>
+            </div>
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
+
+                <div>DISCOVER PIZZA</div>
+            </div>
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
+
+                <div>DISCOVER PIZZA</div>
+            </div>
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
+
+                <div>DISCOVER PIZZA</div>
+            </div>
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
+
+                <div>DISCOVER PIZZA</div>
+            </div>
+            <div class="box1">
+                <img class = "logo" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png"
+                  alt="">
+                <h3>OUR MENU</h3>
+                <p style="text-align: center;">Explore our range of delicious pizzas, delivered in 30 minutes</p>
+                <hr style="border: 1px solid black; width: 80%;">
+
+                <div>DISCOVER PIZZA</div>
+            </div>
+        </div>
         </div>
     </div>
-    </div> -->
 
 </body>
 
