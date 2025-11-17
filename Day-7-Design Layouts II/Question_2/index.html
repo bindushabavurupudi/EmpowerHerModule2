@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Lobster, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 1300px;
+            /* background-color: aqua; */
+            display: grid;
+            grid-template-columns: repeat(6, 200px);
+            gap: 10px;
+            margin: 20px;
+
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 80px;
+            margin: 20px;
+        }
+
+        .cell {
+            width: minmax(200px, auto);
+            height: 60px;
+            /* border: 1px solid black; */
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .first {
+            grid-column: span 1;
+        }
+
+        .monday {
+            background-color: rgba(251, 211, 217, 0.984);
+        }
+
+        .tuesday {
+            background-color: rgb(239, 239, 174);
+        }
+
+        .time {
+            background-color: rgb(181, 222, 247);
+        }
+
+        .last {
+            grid-column: span 6;
+            margin-top: 25px;
+            width: minmax(200px, auto);
+            height: 60px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 25px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">&#10024; Weekly Schedule &#10024;</div>
+    <div class="container">
+        <!-- row1 -->
+        <div class="cell first"></div>
+        <div class="cell monday">Monday</div>
+        <div class="cell tuesday">Tuesday</div>
+        <div class="cell monday">Wednesday</div>
+        <div class="cell tuesday">Thursday</div>
+        <div class="cell monday">Friday</div>
+        <!-- /row2  -->
+        <div class="cell time">08:00</div>
+        <div class="cell monday">PT</div>
+        <div class="cell tuesday">Yoga</div>
+        <div class="cell monday">English</div>
+        <div class="cell tuesday">Social Studies</div>
+        <div class="cell monday">Computer Lab</div>
+        <!-- row3 -->
+        <div class="cell time">09:00</div>
+        <div class="cell monday">Mathematics</div>
+        <div class="cell tuesday">Science</div>
+        <div class="cell monday">Hindi</div>
+        <div class="cell tuesday">Value Education</div>
+        <div class="cell monday">PT</div>
+        <!-- row4 -->
+        <div class="cell time">10:00</div>
+        <div class="cell monday">English</div>
+        <div class="cell tuesday">Mathematics</div>
+        <div class="cell monday">Yoga</div>
+        <div class="cell tuesday">Science</div>
+        <div class="cell monday">General Knowledge</div>
+        <!-- row5 -->
+        <div class="cell time">11:00</div>
+        <div class="cell monday">Science</div>
+        <div class="cell tuesday">Social Studies</div>
+        <div class="cell monday">Library</div>
+        <div class="cell tuesday">Games</div>
+        <div class="cell monday">Mathematics</div>
+        <!-- row6 -->
+        <div class="cell time">12:00</div>
+        <div class="cell monday">Computer</div>
+        <div class="cell tuesday">English</div>
+        <div class="cell monday">Mathematics</div>
+        <div class="cell tuesday">Hindi</div>
+        <div class="cell monday">Drawing</div>
+        <!-- row7 -->
+        <div class="cell time">13:00</div>
+        <div class="cell monday">Lunch Break</div>
+        <div class="cell tuesday">Lunch Break</div>
+        <div class="cell monday">Lunch Break</div>
+        <div class="cell tuesday">Lunch Break</div>
+        <div class="cell monday">Lunch Break</div>
+        <!-- row8 -->
+        <div class="cell time">14:00</div>
+        <div class="cell monday">Social</div>
+        <div class="cell tuesday">Computer</div>
+        <div class="cell monday">Mathematics</div>
+        <div class="cell tuesday">Drawing</div>
+        <div class="cell monday">Hindi</div>
+        <!-- row9 -->
+        <div class="cell time">15:00</div>
+        <div class="cell monday">Hindi</div>
+        <div class="cell tuesday">Art & Craft</div>
+        <div class="cell monday">Computer</div>
+        <div class="cell tuesday">Social Studies</div>
+        <div class="cell monday">Mathematics</div>
+        <!-- row10 -->
+        <div class="cell time">16:00</div>
+        <div class="cell monday">Science Lab</div>
+        <div class="cell tuesday">Games</div>
+        <div class="cell monday">Hindi</div>
+        <div class="cell tuesday">English</div>
+        <div class="cell monday">Drawing</div>
+        <!-- row11 -->
+        <div class="last time"><p style="margin: 11px ;">Note:</p></div>
+
+    </div>
+</body>
+
+</html>
