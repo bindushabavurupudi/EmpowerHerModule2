@@ -13,6 +13,9 @@ function addBook() {
         imageUrl: "https://m.media-amazon.com/images/I/71ZB18P3inL._SY522_.jpg"
     }
     arr.push(obj);
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("category").value = "---Select---"
     showCards();
 }
 function showCards() {
