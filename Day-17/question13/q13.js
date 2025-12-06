@@ -14,7 +14,7 @@ function saveNotes() {
         alert("Cannot save empty notes!");
         return;
     }
-
+    document.getElementById("text").value = "";
     localStorage.setItem("notes", text);
     alert("Notes saved successfully!");
 }
