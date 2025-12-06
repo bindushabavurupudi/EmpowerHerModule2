@@ -2,43 +2,44 @@ let tasks = [];
 
 // Load tasks from localStorage on page load
 window.onload = function () {
-    let storedTasks = localStorage.getItem("tasks");
+    const saved = localStorage.getItem("tasks");
 
-    if (storedTasks) {
-        tasks = JSON.parse(storedTasks);
+    if (saved) {
+        tasks = JSON.parse(saved);
     }
+
     displayTasks(tasks);
 };
 
-// Save tasks to localStorage
+// Save to localStorage
 function saveToLocal() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 // Add Task
 function addTask() {
-    let input = document.getElementById("taskInput");
-    let text = input.value.trim();
+    const input = document.getElementById("taskInput");
+    const text = input.value.trim();
 
     if (text === "") {
         alert("Task cannot be empty!");
         return;
     }
 
-    let newTask = {
-        id: Date.now(),
+    const task = {
+        id: Date.now(),    // Unique ID
         text: text,
         completed: false
     };
 
-    tasks.push(newTask);
+    tasks.push(task);
     saveToLocal();
     displayTasks(tasks);
 
     input.value = "";
 }
 
-// Toggle Completed
+// Toggle Completed State
 function toggleComplete(id) {
     tasks = tasks.map(task =>
         task.id === id ? { ...task, completed: !task.completed } : task
@@ -51,52 +52,54 @@ function toggleComplete(id) {
 // Delete Task
 function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
+
     saveToLocal();
     displayTasks(tasks);
 }
 
-// Display Tasks
+// Show Tasks
 function displayTasks(list) {
-    let container = document.getElementById("taskList");
+    const container = document.getElementById("taskList");
     container.innerHTML = "";
 
     list.forEach(task => {
-        let div = document.createElement("div");
+        const div = document.createElement("div");
         div.className = "task";
 
-        let textSpan = document.createElement("span");
+        const textSpan = document.createElement("span");
         textSpan.innerText = task.text;
+
         if (task.completed) {
             textSpan.classList.add("completed");
         }
 
-        let controls = document.createElement("div");
+        const btns = document.createElement("div");
 
-        let completeBtn = document.createElement("button");
-        completeBtn.className = "complete";
+        const completeBtn = document.createElement("button");
         completeBtn.innerText = task.completed ? "Undo" : "Done";
+        completeBtn.className = "btn btn-complete";
         completeBtn.onclick = () => toggleComplete(task.id);
 
-        let deleteBtn = document.createElement("button");
-        deleteBtn.className = "delete";
+        const deleteBtn = document.createElement("button");
         deleteBtn.innerText = "Delete";
+        deleteBtn.className = "btn btn-delete";
         deleteBtn.onclick = () => deleteTask(task.id);
 
-        controls.appendChild(completeBtn);
-        controls.appendChild(deleteBtn);
+        btns.appendChild(completeBtn);
+        btns.appendChild(deleteBtn);
 
         div.appendChild(textSpan);
-        div.appendChild(controls);
+        div.appendChild(btns);
 
         container.appendChild(div);
     });
 }
 
-// Search Tasks in real-time
+// Search Tasks (real-time)
 function searchTasks() {
-    let query = document.getElementById("searchInput").value.toLowerCase();
+    const query = document.getElementById("searchInput").value.toLowerCase();
 
-    let filtered = tasks.filter(task =>
+    const filtered = tasks.filter(task =>
         task.text.toLowerCase().includes(query)
     );
 
