@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <script type="module">
+        import { navbar } from "./components/navbar.js";
+        import { footer } from "./components/footer.js";
+
+        document.body.innerHTML += navbar();
+        document.body.innerHTML += "<h1>Welcome to Home Page</h1>";
+        document.body.innerHTML += footer();
+    </script>
+</body>
+</html>
