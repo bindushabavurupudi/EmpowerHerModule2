@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Form</h2>
+    <input type="text" id="name">
+    <button id = "save" onclick="saveData()">Save</button>
+    <p id="msg"></p>
+    <h3>List of Students</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>S No</td>
+                <td>Name</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody id="root"></tbody>
+    </table>
+    <script>
+        showData();
+        function saveData(){
+            let name = document.getElementById("name").value;
+            let msg = document.getElementById("msg");
+            if(name.trim() === ""){
+                msg.innerText = "Enter Name!!";
+                msg.style.color = "red";
+                return;
+            }
+            let data = JSON.parse(localStorage.getItem("list")) || [];
+            data.push(name);
+            localStorage.setItem("list", JSON.stringify(data));
+            msg.innerText = "Name Added";
+            msg.style.color = "green";
+            document.getElementById("name").value = "";
+            showData();
+        }
+        function showData(){
+            let data = JSON.parse(localStorage.getItem("list")) || [];
+            let html = "";
+            for(let i = 0; i < data.length; i++){
+                html += `<tr>
+                    <td>${i+1}</td>
+                    <td>${data[i]}</td>
+                    <td><button onclick = "editName(${i})">Edit</button>
+                        <button onclick = "deleteName(${i})">Delete</button></td>
+                        </tr>`
+            }
+            let root = document.getElementById("root");
+            root.innerHTML = html;
+        }
+        function deleteName(index){
+            let data = JSON.parse(localStorage.getItem("list")) || [];
+            alert(`Deleting ${data[index]}`);
+            data.splice(index, 1);
+            localStorage.setItem("list", JSON.stringify(data));
+            showData();
+        }
+        function editData(index){
+            
+        }
+    </script>
+</body>
+</html>
