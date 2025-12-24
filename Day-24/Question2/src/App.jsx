@@ -1,9 +1,9 @@
-import Counter from "./Counter";
+import StatusToggle from "./StatusToggle";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <StatusToggle />
     </div>
   );
 }
